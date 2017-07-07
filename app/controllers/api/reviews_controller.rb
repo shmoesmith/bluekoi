@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   end
 
   def user_show_all
-    render json: current_user.reviews.all
+    render json: current_user.reviews
   end
 
 
