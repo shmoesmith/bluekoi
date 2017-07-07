@@ -6,9 +6,10 @@ class ReviewsController < ApplicationController
     render json: Review.all
   end
 
-  def show
-    render json: @review
+  def user_show_all
+    render json: current_user.reviews.all
   end
+
 
   def create
     review = Review.create(review_params)
