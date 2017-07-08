@@ -3,10 +3,12 @@ class ReviewsController < ApplicationController
   before_action :set_review only: [:show, :update, :destroy]
 
   def index
+    # todo: sort it by creation date
     render json: Review.all
   end
 
   def user_show_all
+    #todo: sort it by creation date
     render json: current_user.reviews
   end
 
