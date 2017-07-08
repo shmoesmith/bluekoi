@@ -18,7 +18,7 @@ export const updateReview = (review) => {
 
 export const deleteReview = (review) => {
   return(dispatch) => {
-   axios.delete('api/reviws/${review}')
+   axios.delete('api/reviews/${review}')
    .then( () => dispatch({ type: DELETE_REVIEW, review }) )
   }
 }

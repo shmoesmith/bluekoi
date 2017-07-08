@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import user from './user'
 import flash from './flash'
-import review from './review'
+import reviews from './review'
 
 const rootReducer = combineReducers({
   user,
   flash,
-  review
+  reviews
 })
 
 export default rootReducer
