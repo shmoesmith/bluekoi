@@ -21,11 +21,11 @@ class NavBar extends Component {
     } else {
       return(
         <Menu.Menu position='right'>
-          <Link to='/register'>
-            <Menu.Item name='Register' />
+          <Link to='/about'>
+            <Menu.Item name='About' />
           </Link>
-          <Link to='/login'>
-            <Menu.Item name='Login' />
+          <Link to='/contact'>
+            <Menu.Item name='Contact' />
           </Link>
         </Menu.Menu>
       );
@@ -38,6 +38,9 @@ class NavBar extends Component {
         <Menu pointing secondary>
           <Link to='/'>
             <Menu.Item name='home' />
+          </Link>
+          <Link to='/services'>
+            <Menu.Item name='Services' />
           </Link>
           { this.rightNavs() }
         </Menu>
