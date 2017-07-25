@@ -14,6 +14,7 @@ const Services = () => (
 
 
 wed specials
+weekend warrior or triathlon or race type specials
 
 morning specials (same can only do 7am to sometime before 12
 )

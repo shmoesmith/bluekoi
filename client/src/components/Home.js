@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Segment } from 'semantic-ui-react';
+import { Header, Segment, Grid} from 'semantic-ui-react';
 import styled from 'styled-components';
 import homepageHeaderBackground from '../assets/homepageHeaderBackground.jpg'
 import '../styles/fonts.css'
@@ -15,19 +15,35 @@ font-family: 'Kaushan Script', cursive !important;
 color: 'white' !important;
 `;
 
+const reviewHeader = styled.h3`
+font-family: 'Kaushan Script', cursive !important;
+color: 'white' !important;
+`;
 class Home extends Component {
-
-  // background: https://pixabay.com/get/eb3db40a20f31c22d9584518a33219c8b66ae3d019b1144393f4c97e/wellness-285587_1920.jpg
-
   render() {
     return(
-      <Segment as={headerBackground}>
-      <Header as={topHeader} textAlign='center'>Blue Koi Massage</Header>>
-      <Segment>
-        <p>facebook reviews below picture</p>
-      </Segment>
-      </Segment>
-      
+      <Grid columns='equal'>
+        <Grid.Row>
+          <Grid.Column>
+            <Segment as={headerBackground}>
+              <Header as={topHeader} textAlign='center'>Blue Koi Massage</Header>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>      
+        <Grid.Row>
+          <Grid.Column>
+            <Segment>
+              <Header as={reviewHeader}>Hear what our clients are saying!</Header>
+                <p> " -I got the best massage just after my double mastectomy. Andrea was so careful but helped to make me feel better and helped me heal quicker! I highly recommend her to everyone looking for a masseuse who is professional and kind."
+                </p>
+                <p> "- Had a good experience w/ blue koi.  I've had some shoulder injuries from bad swimming form and they were able to 
+                  not only help with the pain, but were able to give me some great info on what I should be doing to rehabilitate the shoulder
+                  and prevent future injury."
+                </p>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
   }
 }
