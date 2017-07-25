@@ -22,8 +22,12 @@ class Home extends Component {
   render() {
     return(
       <Segment as={headerBackground}>
-      <Header as={topHeader} textAlign='center'>Blue Koi Massage</Header>
+      <Header as={topHeader} textAlign='center'>Blue Koi Massage</Header>>
+      <Segment>
+        <p>facebook reviews below picture</p>
       </Segment>
+      </Segment>
+      
     );
   }
 }
