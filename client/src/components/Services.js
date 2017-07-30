@@ -1,6 +1,6 @@
 import React from 'react';
 import { Segment, Header, Grid, List } from 'semantic-ui-react';
-
+import { Link } from 'react-router-dom'
 const Services = () => (
   <Segment>
     <Header textAlign='center' as='h2'>
@@ -24,9 +24,9 @@ const Services = () => (
             Rates and Fees
           </Header> 
             <List>
-              <List.Item> 60 minutes $60</List.Item>
-              <List.Item>90 minutes $90</List.Item>
-              <List.Item>2 hours $120</List.Item>
+              <List.Item> 60 minutes $60 </List.Item>
+              <List.Item> 90 minutes $90 </List.Item>
+              <List.Item> 2 hours $120 </List.Item>
             </List>
         <br />
         Depending on special requests additional fees may apply.  Please discuss all requests when scheduling your appointment.
@@ -39,12 +39,12 @@ const Services = () => (
             Relaxation:
           </Header>
             <List>
-              <List.Item as='a'>Swedish</List.Item>
-              <List.Item as='a'>Cranial Sacral</List.Item>
-              <List.Item as='a'>Shiatsu</List.Item>
-              <List.Item as='a'>Accupressure</List.Item>
-              <List.Item as='a'>Reflexology</List.Item>
-              <List.Item as='a'>Deep Tissue</List.Item>
+              <List.Item as='a'><Link to='/swedish'>Swedish</Link></List.Item>
+              <List.Item as='a'><Link to='/cranial'>Cranial Sacral</Link></List.Item>
+              <List.Item as='a'><Link to='/shiatsu'>Shiatsu</Link></List.Item>
+              <List.Item as='a'><Link to='/accupressure'>Accupressure</Link></List.Item>
+              <List.Item as='a'><Link to='/reflexology'>Reflexology</Link></List.Item>
+              <List.Item as='a'><Link to='/deeptissue'>Deep Tissue</Link></List.Item>
             </List>
         </Grid.Column>
         <Grid.Column>
@@ -52,10 +52,10 @@ const Services = () => (
           Rehabilitative:
           </Header>
             <List>
-            <List.Item as='a'>Sports Massage</List.Item>
-            <List.Item as='a'>Structural Integration</List.Item>
-            <List.Item as='a'>Trigger Point Therapy</List.Item>
-            <List.Item as='a'>Russian</List.Item>
+            <List.Item as='a'><Link to='/sportsmassage'>Sports Massage</Link></List.Item>
+            <List.Item as='a'><Link to='/structural'>Structural Integration</Link></List.Item>
+            <List.Item as='a'><Link to='/triggerpoint'>Trigger Point Therapy</Link></List.Item>
+            <List.Item as='a'><Link to='/russian'>Russian</Link></List.Item>
           </List>
         </Grid.Column>
       </Grid.Row>

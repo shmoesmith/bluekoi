@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Segment, Grid, Image} from 'semantic-ui-react';
+import { Header, Segment, Grid, Container, Image} from 'semantic-ui-react';
 import contactUs from '../assets/contactUs.jpeg'
 import phone from '../assets/phone.png'
 import email from '../assets/email.png'
@@ -12,10 +12,15 @@ const styles= {
     height: '500px',
     backgroundSize: 'cover',
   },
+
   textBox: {
-    backgroundColor: 'rgba(255, 255, 255, .45)',
+    backgroundColor: 'rgba(255, 255, 255, .6)',
     width: '50vw',
     marginLeft: '25vw'
+  },
+
+  phoneNumber: { 
+    whiteSpace: 'noWrap',
   },
 };
 
@@ -28,10 +33,10 @@ const Contact = () => (
       <Grid verticalAlign='middle'> 
         <Grid.Row> 
           <Grid.Column>
-            <Image src={phone} />
+            <Image  src={phone} />
           </Grid.Column>
-          <Grid.Column>
-            (385)-448-0408   
+          <Grid.Column style={styles.phoneNumber} >
+            <a href="tel:+13854480408">(385)448-0408</a>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -39,7 +44,7 @@ const Contact = () => (
           <Image src={email} />
           </Grid.Column>
           <Grid.Column>
-            <a href='email mailto:bluekoimassage@gmail.com'>bluekoimassage@gmail.com</a>
+            <a href='mailto:bluekoimassage@gmail.com'>bluekoimassage@gmail.com</a>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -47,7 +52,7 @@ const Contact = () => (
             <Image src={facebook} />
           </Grid.Column>
           <Grid.Column>
-            <a href='fb.com/bluekoimassage'>fb.com/bluekoimassage</a>
+            <a href="https:fb.com/bluekoimassage">fb.com/bluekoimassage</a>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

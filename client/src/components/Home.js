@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Segment, Grid} from 'semantic-ui-react';
+import { Header, Segment, Grid, Container} from 'semantic-ui-react';
 import styled from 'styled-components';
 import homepageHeaderBackground from '../assets/homepageHeaderBackground.jpg'
 import '../styles/fonts.css'
@@ -12,7 +12,15 @@ const headerBackground = styled.div`
 
 const topHeader = styled.h1`
 font-family: 'Kaushan Script', cursive !important;
-color: 'white' !important;
+color: rgb(34, 161, 230) !important;
+font-size: 50px !important;
+padding-top 50px !important;
+`;
+
+const goal = styled.p`
+font-size: 25px !important;
+font-family: 'Kaushan Script', cursive !important;
+background: rgba(255, 255, 255, .2) !important;
 `;
 
 const reviewHeader = styled.h3`
@@ -27,6 +35,10 @@ class Home extends Component {
           <Grid.Column>
             <Segment as={headerBackground}>
               <Header as={topHeader} textAlign='center'>Blue Koi Massage</Header>
+              <Container text as={goal}>
+                Like the koi that swam up upstream and was tranformed into a flying dragon, Blue Koi's
+                goal is to guide you through complete body transformation.
+              </Container>
             </Segment>
           </Grid.Column>
         </Grid.Row>      
