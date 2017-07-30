@@ -35,13 +35,13 @@ const About = () => (
   </Grid>
   <Grid container columns={3}>
       <Grid.Column>
-          <Image src={house} />
+          <Image src={house} size='medium'/>
       </Grid.Column>
        <Grid.Column>
-         <Image src={hotelRoom} />
+         <Image src={hotelRoom} size='medium' />
        </Grid.Column>
        <Grid.Column>
-         <Image src={resort} />
+         <Image src={resort} size='medium'/>
        </Grid.Column>
   </Grid>
   <Grid>
