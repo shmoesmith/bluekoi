@@ -6,7 +6,16 @@ import house from '../assets/house.jpg'
 import hotelRoom from '../assets/hotelRoom.jpg'
 import resort from '../assets/resort.jpg'
 import oils from '../assets/oils.jpg'
+import paper from '../assets/paper.jpg'
 
+const styles ={
+  mainBackground: {
+      backgroundImage: `url(${paper})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPostiion: `center center`,
+      backgroundSize: 'cover'
+    }, 
+  }
 
 const sectionHeader = styled.h3`
   font-family: 'Kaushan Script', cursive !important;
@@ -23,13 +32,11 @@ const aboutText = styled.div`
   `;
 
 const About = () => (
- <div>
-  <Grid >
+  <Grid style={styles.mainBackground}>
+  <Grid>
     <Grid.Row>
       <Grid.Column>
-        <Segment >
           <Header as={sectionHeader}>Home, Hotel, Or Your Favorite Local Resort, Blue Koi Comes To You!</Header>
-        </Segment>
       </Grid.Column>
      </Grid.Row>    
   </Grid>
@@ -61,8 +68,8 @@ const About = () => (
          </Segment>
        </Grid.Column>
       </Grid.Row>
-      </Grid>
-  </div>
+    </Grid>
+  </Grid>
 )
 
 export default About;

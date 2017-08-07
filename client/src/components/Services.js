@@ -1,8 +1,19 @@
 import React from 'react';
 import { Segment, Header, Grid, List } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
+
 const Services = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header textAlign='center' as='h2'>
       Specials
     </Header>
@@ -19,19 +30,22 @@ const Services = () => (
         </Grid.Column>     
       </Grid.Row>
       <Grid.Row>
-        <Segment>
-          <Header textAlign='center' as='h3'>
+        <Header textAlign='center' as='h3'>
             Rates and Fees
-          </Header> 
-            <List>
-              <List.Item> 60 minutes $60 </List.Item>
-              <List.Item> 90 minutes $90 </List.Item>
-              <List.Item> 2 hours $120 </List.Item>
-            </List>
+        </Header> 
+      </Grid.Row>
+      <Grid.Row>
+        <List>
+          <List.Item> 60 minutes $60 </List.Item>
+          <List.Item> 90 minutes $90 </List.Item>
+          <List.Item> 2 hours $120 </List.Item>
+        </List>
         <br />
+        </Grid.Row>
+        <Grid.Row>
         Depending on special requests additional fees may apply.  Please discuss all requests when scheduling your appointment.
         Please be aware that we currently only send therapists to verified residential and business addresses.  
-        </Segment>
+        
       </Grid.Row>
       <Grid.Row textAlign='center' divided columns={2}>
         <Grid.Column>

@@ -35,9 +35,11 @@ const Contact = () => (
         <Grid.Column style={styles.textBox}>
           <Grid>
             <Grid.Row>
-              <Header as='h1'textAlign='center'>
-                    Contact Us
-              </Header>
+              <Grid.Column>
+                <Header as='h1'textAlign='center'>
+                      Contact Us
+                </Header>
+              </Grid.Column>
             </Grid.Row>
             <Grid.Row>
               <Grid.Column style={styles.iconSize}>
