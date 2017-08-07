@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
 
+  namespace :api do
+    get 'specials/index'
+  end
+
+  namespace :api do
+    get 'specials/show'
+  end
+
+  namespace :api do
+    get 'specials/create'
+  end
+
+  namespace :api do
+    get 'specials/update'
+  end
+
+  namespace :api do
+    get 'specials/destroy'
+  end
+
   mount_devise_token_auth_for 'User', at: 'api/auth'
   
   namespace :api do
