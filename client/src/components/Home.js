@@ -2,17 +2,35 @@ import React, { Component } from 'react';
 import { Header, Segment, Grid, Container} from 'semantic-ui-react';
 import styled from 'styled-components';
 import homepageHeaderBackground from '../assets/homepageHeaderBackground.jpg'
+import paper from '../assets/paper.jpg'
 import '../styles/fonts.css'
 
-const headerBackground = styled.div`
-  background: url('${homepageHeaderBackground}') no-repeat center center fixed !important;
-  height: 500px;
-  background-size: cover !important;
-`;
+
+const styles = {
+  headerBackground: {
+    backgroundImage: `url(${homepageHeaderBackground})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center center',
+    height: '400px',
+    backgroundSize: 'cover'   
+  },
+  goalBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }
+}
+
+// const headerBackground = styled.div`
+//   background: url('${homepageHeaderBackground}') no-repeat center center fixed !important;
+//   height: 500px;
+//   background-size: cover !important;
+// `;
 
 const topHeader = styled.h1`
 font-family: 'Kaushan Script', cursive !important;
-color: rgb(34, 161, 230) !important;
+color: rgb(45, 97, 181) !important;
 font-size: 50px !important;
 padding-top 50px !important;
 `;
@@ -20,7 +38,6 @@ padding-top 50px !important;
 const goal = styled.p`
 font-size: 25px !important;
 font-family: 'Kaushan Script', cursive !important;
-background: rgba(255, 255, 255, .2) !important;
 `;
 
 const reviewHeader = styled.h3`
@@ -32,16 +49,18 @@ class Home extends Component {
     return(
       <Grid columns='equal'>
         <Grid.Row>
-          <Grid.Column>
-            <Segment as={headerBackground}>
+          <Grid.Column style={styles.headerBackground}>
               <Header as={topHeader} textAlign='center'>Blue Koi Massage</Header>
-              <Container text as={goal}>
-                Like the koi that swam up upstream and was tranformed into a flying dragon, Blue Koi's
-                goal is to guide you through complete body transformation.
-              </Container>
-            </Segment>
           </Grid.Column>
         </Grid.Row>      
+        <Grid.Row>
+          <Grid.Column style={styles.goalBackground}>   
+              <Container as={goal}>
+                Like the koi that swam upstream and was tranformed into a flying dragon, Blue Koi's
+                goal is to guide you through complete body transformation.
+                </Container>
+          </Grid.Column>
+        </Grid.Row>
         <Grid.Row>
           <Grid.Column>
             <Segment>

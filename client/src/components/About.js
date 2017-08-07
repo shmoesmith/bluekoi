@@ -19,7 +19,7 @@ const aboutTextBackground = styled.div`
 `;
 
 const aboutText = styled.div`
-  background-color: rgba(255, 255, 255, 0.45) !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
   `;
 
 const About = () => (
@@ -56,10 +56,6 @@ const About = () => (
       We are happy to customize your massage experience, so please let us know if you have any preferences such as massage oil types or 
       gender of therapist.  In addition, please let us know of any medical conditions that you have prior to scheduling a massage.
     
-    <br /><br />
-    why named blue koi:
-    we named ourselves blue koi to go with the legend of the Koi fish which swims upstream and transforms into a dragon.  like the koi,
-    We want  to transform customers to be a better version of themselves. they wanted to capture the essence of body transformation
              </p>
            </Segment>
          </Segment>

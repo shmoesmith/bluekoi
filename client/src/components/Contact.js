@@ -14,59 +14,68 @@ const styles= {
   },
 
   textBox: {
-    backgroundColor: 'rgba(255, 255, 255, .6)',
-    width: '50vw',
-    marginLeft: '25vw'
+    backgroundColor: 'rgba(255, 255, 255, .5)',
+    margin: '10vh 15vw',
+    
   },
 
   phoneNumber: { 
     whiteSpace: 'noWrap',
   },
+  iconSize: {
+    height: '48px',
+    width: '48px',
+  }
 };
 
 const Contact = () => (
   <Segment style={styles.background}>
-    <Segment style={styles.textBox} >
-    <Header as='h1'textAlign='center'>
-       Contact Us
-    </Header>
-      <Grid verticalAlign='middle'> 
-        <Grid.Row> 
-          <Grid.Column>
-            <Image  src={phone} />
+    <Grid> 
+      <Grid.Row > 
+        <Grid.Column style={styles.textBox}>
+          <Grid>
+            <Grid.Row>
+              <Header as='h1'textAlign='center'>
+                    Contact Us
+              </Header>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column style={styles.iconSize}>
+                <Image  src={phone} />
+              </Grid.Column>
+              <Grid.Column style={styles.phoneNumber}>
+                <a href="tel:+13854480408">(385)448-0408</a>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column style={styles.iconSize}>
+                 <Image src={email} />
+              </Grid.Column>
+              <Grid.Column>
+                 <a href='mailto:bluekoimassage@gmail.com'>bluekoimassage@gmail.com</a>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column style={styles.iconSize}>
+                <Image src={facebook} />
+              </Grid.Column>
+              <Grid.Column>
+                <a href="https:fb.com/bluekoimassage">fb.com/bluekoimassage</a>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column style={styles.iconSize}>
+                <Image src={instagram} />
+              </Grid.Column>
+              <Grid.Column>
+                @blue_koi_massage_llc
+              </Grid.Column>
+            </Grid.Row>
+            </Grid>
           </Grid.Column>
-          <Grid.Column style={styles.phoneNumber} >
-            <a href="tel:+13854480408">(385)448-0408</a>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-          <Image src={email} />
-          </Grid.Column>
-          <Grid.Column>
-            <a href='mailto:bluekoimassage@gmail.com'>bluekoimassage@gmail.com</a>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-            <Image src={facebook} />
-          </Grid.Column>
-          <Grid.Column>
-            <a href="https:fb.com/bluekoimassage">fb.com/bluekoimassage</a>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-            <Image src={instagram} />
-          </Grid.Column>
-          <Grid.Column>
-            @blue_koi_massage_llc
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </Segment>
+      </Grid.Row>
+    </Grid>
   </Segment>
-  //todo insert contact form to send an message without it being an email
 )
 
 export default Contact;
