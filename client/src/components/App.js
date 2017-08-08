@@ -21,6 +21,7 @@ import Sports from './Sports';
 import Structural from './Structural';
 import Trigger from './Trigger';
 import Russian from './Russian';
+import SpecialForm from './SpecialForm';
 
 class App extends Component {
   render() {
@@ -46,6 +47,7 @@ class App extends Component {
             <Route exact path='/structural' component={Structural} />
             <Route exact path='/triggerpoint' component={Trigger} />
             <Route exact path='/russian' component={Russian} />
+            <Route exact path='/specialform' component={SpecialForm} />
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
