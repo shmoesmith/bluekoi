@@ -1,3 +1,3 @@
 class Special < ApplicationRecord
-  validates :title, :text, presence: true
+  validates :ad_title, :ad_text, presence: true
 end
