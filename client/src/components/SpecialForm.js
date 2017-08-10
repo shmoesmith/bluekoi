@@ -3,20 +3,24 @@ import { connect } from 'react-redux';
 import { Segment, Header, Form, Button } from 'semantic-ui-react';
 
 class SpecialForm extends Component {
-  state ={ adTitle: '', adText: '' }
+  state ={ ad_title: '', ad_text: '' }
 
-  handleSubmit = (e) {
-
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { dispatch } = this.props;
+    const special = this.state;
+    dispatch(addSpecial(special));
+    this.setState({ ad_title: '', ad_text: '' })
   };
 
-  handleChange = (e) {
+  handleChange = (e) => {
     const { id , value } = e.target;
     this.setState({ [id]: value });
   };
   
   render() {
 
-    const { adTitle, adText } = this.state;
+    const { ad_title, ad_text} = this.state;
 
     return(
       <Segment>
@@ -27,7 +31,7 @@ class SpecialForm extends Component {
             <input
               required
               id='adTitle'
-              value={adTitle}
+              value={ad_title}
               placeholder='title'
               onChange={this.handleChange}
             />
@@ -37,7 +41,7 @@ class SpecialForm extends Component {
             <input
               required
               id='adText'
-              value={adText}
+              value={ad_text}
               placeholder='text'
               onChange={this.handleChange}
             />

@@ -38,7 +38,7 @@ private
   end
 
   def special_params
-    params.require(:special).permit(:title, :text)
+    params.require(:special).permit(:ad_title, :ad_text)
   end
 
 end
