@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const Reflexology = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Reflexology</Header>
     <Container text>
       Reflexology is a type of bodywork that focuses on applying pressure to the specific nerve 

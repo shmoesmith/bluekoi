@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Segment, Header, Form, Button } from 'semantic-ui-react';
+import { addSpecial } from '../actions/specialActions';
 
 class SpecialForm extends Component {
   state ={ ad_title: '', ad_text: '' }

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { setFlash } from './flash';
 
 export const getSpecials = () => {
   return(dispatch) => {
@@ -15,7 +16,7 @@ export const getSpecials = () => {
 export const  addSpecial = (special) => {
   return(dispatch) => {
     axios.post('/api/specials', { special } )
-    .then( res => dispatch({ type: ADD_SPECIAL, special: res.data, headers: res.headers}) )
+    .then( res => dispatch({ type: 'ADD_SPECIAL', special: res.data, headers: res.headers}) )
     .catch( res => {
         dispatch(setFlash('Failed To Create Special.', 'error'))
       });

@@ -14,7 +14,7 @@ import Services from './Services';
 import Swedish from './Swedish';
 import Cranial from './Cranial';
 import Shiatsu from './Shiatsu';
-import Accupressure from './Accupressure';
+import Acupressure from './Acupressure';
 import Reflexology from './Reflexology';
 import DeepTissue from './DeepTissue';
 import Sports from './Sports';
@@ -40,7 +40,7 @@ class App extends Component {
             <Route exact path='/swedish' component={Swedish} />
             <Route exact path='/cranial' component={Cranial} />
             <Route exact path='/shiatsu' component={Shiatsu} />
-            <Route exact path='/accupressure' component={Accupressure} />
+            <Route exact path='/acupressure' component={Acupressure} />
             <Route exact path='/reflexology' component={Reflexology} />
             <Route exact path='/deeptissue' component={DeepTissue} />
             <Route exact path='/sportsmassage' component={Sports} />

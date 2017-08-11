@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const Sports = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Sports Massage</Header>
     <Container text>
       Sports Massage is a type of massage designed for highly active people who engage in athletics. 

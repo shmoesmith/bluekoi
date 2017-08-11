@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const Structural = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Structural Integration</Header>
     <Container text>
       Structural integration employs soft tissue manipulation with the goal of 

@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const Trigger = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Trigger Point Therapy</Header>
     <Container text>
     Trigger Point Therapy is a style of bodywork that focuses on stimulating and 

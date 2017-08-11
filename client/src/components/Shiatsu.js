@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const Shiatsu = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Shiatsu</Header>
     <Container text>
       Shiatsu is a Japanese form of massage therapy. The word Shiatsu comes from two Japanese words - "shi" (finger) 

@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const DeepTissue = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Deep Tissue</Header>
     <Container text>
       Deep Tissue Massage is a form of bodywork that aims to relieve tension in the deeper 

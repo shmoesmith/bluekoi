@@ -1,8 +1,18 @@
 import React from 'react';
 import { Header, Segment, Container } from 'semantic-ui-react';
+import paper from '../assets/paper.jpg'
+
+const styles = {
+    mainBackground: {
+    backgroundImage: `url(${paper})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPostiion: `center center`,
+    backgroundSize: 'cover'
+  }, 
+}
 
 const Cranial = () => (
-  <Segment>
+  <Segment style={styles.mainBackground}>
     <Header as='h1'>Cranial Sacral</Header>
     <Container text>
       Cranial Sacral Therapy is a gentle yet powerful technique that is effective in releasing 
