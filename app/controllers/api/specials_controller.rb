@@ -1,6 +1,6 @@
 class Api::SpecialsController < ApplicationController
 
-  before_action :set_special only: [:show, :update, :destroy]
+  before_action :set_special, only: [:show, :update, :destroy]
 
   def index
     render json: Special.all
@@ -38,7 +38,7 @@ private
   end
 
   def special_params
-    params.require(:special).permit(:ad_title, :ad_text)
+    params.require(:special).permit(:ad_title, :ad_text, :special_number)
   end
 
 end

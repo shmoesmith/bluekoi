@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Segment, Header, Grid, List } from 'semantic-ui-react';
+import { Segment, Header, Grid, List, Form } from 'semantic-ui-react';
 import { Link } from 'react-router-dom'
 import paper from '../assets/paper.jpg'
 import SpecialForm from './SpecialForm';
-
+import { getSpecials } from '../actions/specialActions'
 const styles = {
     mainBackground: {
     backgroundImage: `url(${paper})`,
@@ -17,19 +17,59 @@ const styles = {
 
 class Services extends Component {
 
+  state ={ oldSpecialOne: '', oldSpecialTwo: '', oldSpecialThree: '', special_number: '' }  
+  
+  componentDidMount() {
+    this.props.dispatch(getSpecials());
+  }
+
+  handleChange = (e) => {
+
+  }
+
+  handleSubmit = (e) => {
+
+  }
 
   isSiteOwner = () => {
-  const { user } = this.props;
-  if(user.id){
-    return(
-      <SpecialForm />
+    const { user } = this.props;
+    if(user.id){
+      return(
+        <SpecialForm />
 
-    )
+      )
+    } else {
+      {}
+    }
+
+}
+
+  specialDropdown = (specialNumber) => {
+    const { user } = this.props;
+    if(user.id){
+      return(
+        
+          <Form onSubmit={this.handleSubmit}>
+            <label>
+              Choose a Special:
+              <select value={this.state.special_number} onChange={this.handleChange}>
+                <option disabled>Choose a Special</option>
+                return(
+                  {this.props.specials.map( (special) => (
+                  <option key={special.id} value={special.id}>{special.ad_title}, {special.ad_text}</option>
+                  ))}
+                );
+              </select>
+            </label>
+            <Form.Button content="Update site with special" type="submit" value="Submit" />
+          </Form>
+        
+      )
   } else {
     {}
   }
+  }
 
-}
   render() {
     return (
       <Segment style={styles.mainBackground}>
@@ -104,6 +144,7 @@ class Services extends Component {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
+    specials: state.specials,
   }
 }
 

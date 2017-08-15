@@ -4,7 +4,7 @@ import { Segment, Header, Form, Button } from 'semantic-ui-react';
 import { addSpecial } from '../actions/specialActions';
 
 class SpecialForm extends Component {
-  state ={ ad_title: '', ad_text: '' }
+  state ={ ad_title: '', ad_text: '', special_number: 0 }
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +31,7 @@ class SpecialForm extends Component {
             <label>Ad Title</label>
             <input
               required
-              id='adTitle'
+              id='ad_title'
               value={ad_title}
               placeholder='title'
               onChange={this.handleChange}
@@ -41,7 +41,7 @@ class SpecialForm extends Component {
             <label>Ad Text</label>
             <input
               required
-              id='adText'
+              id='ad_text'
               value={ad_text}
               placeholder='text'
               onChange={this.handleChange}
